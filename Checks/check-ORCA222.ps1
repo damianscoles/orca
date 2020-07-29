@@ -117,7 +117,7 @@ class ORCA222 : ORCACheck
 
             If($Policy.TargetedDomainProtectionAction -eq "Delete" -or $Policy.TargetedDomainProtectionAction -eq "Redirect")
             {
-                # For either Delete or Quarantine we should raise an informational
+                # For either Delete or Redirect we should raise an informational
                 $ConfigObject.SetResult([ORCAConfigLevel]::Informational,"Fail")
                 $ConfigObject.InfoText = "The $($Policy.TargetedDomainProtectionAction) option may impact the users ability to release emails and may impact user experience."
             }
